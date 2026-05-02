@@ -184,11 +184,13 @@ section h3 {
 
 /* รูปใน modal — width เต็ม ไม่ crop */
 .modal-slide img {
-    width: 100vw;               /* เต็มความกว้างหน้าจอ */
-    height: auto;               /* สูงตามสัดส่วนจริง */
-    max-height: 90vh;           /* ไม่เกินความสูงหน้าจอ */
-    object-fit: contain;        /* เห็นรูปเต็ม ไม่ crop */
+    width: auto;                /* ← ตามขนาดจริง */
+    height: auto;
+    max-width: 100vw;           /* ← ไม่เกินความกว้างหน้าจอ */
+    max-height: 90vh;           /* ← ไม่เกินความสูงหน้าจอ */
+    object-fit: contain;
     display: block;
+    margin: 0 auto;
     background: #000;
 }
 
