@@ -112,7 +112,7 @@ section h3 {
     z-index: 2000;
     align-items: flex-start;    /* รูปแนวตั้ง scroll ได้ */
     justify-content: center;
-    overflow-y: auto;           /* scroll ลงได้ถ้ารูปสูง */
+    overflow: auto;           /* scroll ลงได้ถ้ารูปสูง */
     box-sizing: border-box;
 }
 
@@ -146,7 +146,7 @@ section h3 {
 /* modal content */
 .modal-content {
     position: relative;
-    width: 100vw;
+    width: max-content;
     max-width: 100vw;
     box-sizing: border-box;
     display: flex;
@@ -187,7 +187,7 @@ section h3 {
 
 /* รูปใน modal — เต็มความกว้าง สูงตามจริง ไม่ crop */
 .modal-slide img {
-    width: 100vw;               /* เต็มความกว้างหน้าจอ */
+    width: auto;               /* เต็มความกว้างหน้าจอ */
     height: auto;               /* สูงตามสัดส่วนจริง */
     object-fit: contain;        /* ไม่ crop */
     display: block;
