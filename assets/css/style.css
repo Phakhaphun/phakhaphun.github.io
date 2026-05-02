@@ -1,100 +1,116 @@
-.modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.8);
-    z-index: 2000;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
+
+/*D:\year3\myproject1\protfordilo\Phakhaphun.github.io\assets\css\style.css*/
+body {
+  background-color: #ffffff;
+  color: #222222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0; 
+  padding: 0;
 }
-.modal-overlay.active {
-    display: flex;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
 }
-.modal-content {
-    position: relative;
-    width: 600px;
-    max-width: 95vw;
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
+h1 {
+  color: #00d4aa;
+  font-size: 48px;
+  margin-bottom: 8px;
 }
-.modal-close {
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-}
-.modal-title {
-    font-size: 13px;
-    font-weight: 600;
-    color: #222;
-    margin: 0 0 14px;
-}
-.modal-carousel {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-.modal-track-wrap {
-    flex: 1;
-    overflow: hidden;
-    border-radius: 8px;
-}
-.modal-track {
-    display: flex;
-    transition: transform 0.3s ease;
-}
-.modal-slide {
-    min-width: 100%;
-    flex-shrink: 0;
-}
-.modal-slide img {
-    width: 100%;
-    object-fit: contain;
-    background: #f5f5f5;
-    border-radius: 8px;
-    display: block;
-}
-.m-btn {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 16px;
-    color: #555;
-    flex-shrink: 0;
+section {
+    scroll-margin-top: 80px;
 }
 
-/* มือถือ */
+
+
+/*           training-Activity               */
+
+section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #222;
+}
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.cert-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    transition: 0.3s;
+}
+.cert-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.skeleton-img {
+    width: 100%;
+    height: 180px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 13px;
+}
+
+.cert-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #f5f5f5;
+}
+.cert-info {
+    padding: 15px;
+}
+.cert-info h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.cert-info p {
+    font-size: 13px;
+    color: #888;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.active {
+  display: flex;
+}
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+.modal-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.modal-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
 @media (max-width: 768px) {
-    .modal-content {
-        width: 95vw;
-        padding: 12px;
-    }
-    .modal-slide img {
-        max-height: 60vh;
-    }
-    .m-btn {
-        width: 24px;
-        height: 24px;
-        font-size: 13px;
-    }
     .container {
         padding: 0 16px;
     }

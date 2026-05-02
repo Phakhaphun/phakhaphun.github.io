@@ -439,11 +439,7 @@
 
             <div class="cert-grid">
                 <div class="cert-card">
-                    <img src="assets/images/control-logic.png" 
-                    alt="Certificate Image (Waiting)"
-                    onclick="openImg(this.src, this.alt)"
-                    style="cursor: zoom-in;"
-                    >
+                    <img src="assets/images/control-logic.png" alt="Certificate Image (Waiting)">
                     <div class="cert-info">
                         <h4>อบรมระบบ ABB 800xA</h4>
                         <p>สถาบัน: XXX | พ.ศ. 256X</p>
@@ -451,11 +447,7 @@
                 </div>
 
                 <div class="cert-card">
-                    <img src="assets/images/solid-work.png" 
-                    alt="Certificate Image (Waiting)"
-                    onclick="openImg(this.src, this.alt)"
-                    style="cursor: zoom-in;"
-                    >
+                    <img src="assets/images/solid-work.png" alt="Certificate Image (Waiting)">
                     <div class="cert-info">
                         <h4>อบรมระบบ solidwork</h4>
                         <p>สถาบัน: XXX | พ.ศ. 256X</p>
@@ -463,11 +455,7 @@
                 </div>
 
                 <div class="cert-card">
-                    <img src="assets/images/election.png" 
-                    alt="Certificate Image (Waiting)"
-                    onclick="openImg(this.src, this.alt)"
-                    style="cursor: zoom-in;"
-                    >
+                    <img src="assets/images/election.png" alt="Certificate Image (Waiting)">
                     <div class="cert-info">
                         <h4> in building election(30 hours)</h4>
                         <p>สถาบัน: XXX | พ.ศ. 256X</p>
@@ -475,11 +463,7 @@
                 </div>
 
                 <div class="cert-card">
-                    <img src="assets/images/election.png" 
-                    alt="Certificate Image (Waiting)"
-                    onclick="openImg(this.src, this.alt)"
-                    style="cursor: zoom-in;"
-                    >
+                    <img src="assets/images/election.png" alt="Certificate Image (Waiting)">
                     <div class="cert-info">
                         <h4> in building election(30 hours)</h4>
                         <p>สถาบัน: XXX | พ.ศ. 256X</p>
@@ -487,11 +471,7 @@
                 </div>
 
                 <div class="cert-card">
-                    <img src="assets/images/election.png" 
-                    alt="Certificate Image (Waiting)"
-                    onclick="openImg(this.src, this.alt)"
-                    style="cursor: zoom-in;"
-                    >
+                    <img src="assets/images/election.png" alt="Certificate Image (Waiting)">
                     <div class="cert-info">
                         <h4> in building election(30 hours)</h4>
                         <p>สถาบัน: XXX | พ.ศ. 256X</p>
@@ -499,11 +479,7 @@
                 </div>
 
                 <div class="cert-card">
-                    <img src="assets/images/election.png" 
-                    alt="Certificate Image (Waiting)"
-                    onclick="openImg(this.src, this.alt)"
-                    style="cursor: zoom-in;"
-                    >
+                    <img src="assets/images/election.png" alt="Certificate Image (Waiting)">
                     <div class="cert-info">
                         <h4> in building election(30 hours)</h4>
                         <p>สถาบัน: XXX | พ.ศ. 256X</p>
@@ -511,11 +487,7 @@
                 </div>
 
                 <div class="cert-card">
-                    <img src="assets/images/election.png" 
-                    alt="Certificate Image (Waiting)"
-                    onclick="openImg(this.src, this.alt)"
-                    style="cursor: zoom-in;"
-                    >
+                    <img src="assets/images/election.png" alt="Certificate Image (Waiting)">
                     <div class="cert-info">
                         <h4> in building election(30 hours)</h4>
                         <p>สถาบัน: XXX | พ.ศ. 256X</p>
@@ -750,3 +722,980 @@ __</div>
   </body>
 
 </html>
+
+/*D:\year3\myproject1\protfordilo\Phakhaphun.github.io\assets\css\style.css*/
+body {
+  background-color: #ffffff;
+  color: #222222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0; 
+  padding: 0;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+h1 {
+  color: #00d4aa;
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+section {
+    scroll-margin-top: 80px;
+}
+
+
+
+/*           training-Activity               */
+
+section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #222;
+}
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.cert-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    transition: 0.3s;
+}
+.cert-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.skeleton-img {
+    width: 100%;
+    height: 180px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 13px;
+}
+
+.cert-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #f5f5f5;
+}
+.cert-info {
+    padding: 15px;
+}
+.cert-info h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.cert-info p {
+    font-size: 13px;
+    color: #888;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.active {
+  display: flex;
+}
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+.modal-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.modal-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+    body {
+        font-size: 14px;
+    }
+}
+/* contact */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* ฝั่งซ้าย */
+.contact-info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #222;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.contact-item:hover { color: #0054a9; }
+
+.contact-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #aaa;
+    min-width: 70px;
+}
+
+.copy-btn {
+    font-size: 10px;
+    padding: 2px 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: #f5f5f5;
+    color: #888;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    background: #E6F1FB;
+    color: #0054a9;
+    border-color: #0054a9;
+}
+
+/* ฝั่งขวา — form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-field label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.form-field input,
+.form-field textarea {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    color: #222;
+    font-family: monospace;
+    font-size: 13px;
+    padding: 10px 14px;
+    outline: none;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: #0054a9;
+    background: #fff;
+}
+
+.btn-send {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    background: #0054a9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.2s;
+}
+
+.btn-send:hover { background: #003d7a; }
+
+/* responsive */
+@media (max-width: 768px) {
+    .contact-section { grid-template-columns: 1fr; gap: 32px; }
+}
+/*           experience               */
+.exp-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.exp-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 4px;
+}
+
+.exp-company {
+    font-size: 14px;
+    color: #0054a9;
+    margin: 0 0 4px;
+}
+
+.exp-date {
+    font-size: 12px;
+    color: #aaa;
+    margin: 0 0 12px;
+}
+
+.exp-desc {
+    padding-left: 16px;
+    margin: 0 0 20px;
+}
+
+.exp-desc li {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+/*           carousel               */
+.carousel-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.carousel-slide {
+    scroll-snap-align: start;
+    min-width: 100%;
+    height: 220px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.carousel-slide img {
+    pointer-events: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #f5f5f5;
+    display: block;
+}
+
+.skeleton-slide {
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #ccc;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    z-index: 10;
+}
+
+.btn-prev { left: 8px; }
+.btn-next { right: 8px; }
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #0054a9;
+}
+
+.carousel-counter {
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    margin: 6px 0 0;
+}
+/*           home               */
+.home {
+    text-align: center;
+    padding: 20px 0;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 4px solid #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.home h1 {
+    color: #0054a9;
+    font-size: 2rem;
+    margin: 5px auto 10px auto;
+    
+}
+.home h2 {
+    color: #7a8fa0;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.home h3 {
+    text-align: left;
+    color: #000000;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 1px;
+}
+.home p {
+    text-align: left;
+    text-indent: 2em;
+    max-width: 750px;
+    margin: 0 auto 25px auto;
+    color: #000000;
+}
+
+.about-me {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    color: #555;
+    line-height: 1.5;
+}
+
+.about-me p {
+    text-align: left;
+    text-indent: 2em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+    .home p {
+        text-align: left;
+        max-width: 100%;
+    }
+}
+/*           nav top web               */
+nav {
+            background: #3879f9;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 32px;
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.nav-logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 12px 16px; /* ลด padding */
+    }
+    nav .container {
+        flex-direction: column; /* เปลี่ยนจากแถวเดียว เป็นวางซ้อนกัน */
+        gap: 10px;
+    }
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 0;
+    }
+    .nav-links a {
+        font-size: 12px;
+    }
+}
+/* projects */
+.project-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 10px;
+    background: #fff;
+    overflow: hidden; 
+}
+
+.project-tag {
+    font-size: 11px;
+    color: #aaa;
+    margin: 0 0 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 12px;
+}
+
+.project-desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    margin: 0 0 5px;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.project-desc-end {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    margin: 0 0 24px;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+/* media row เลื่อนได้ */
+.project-media {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    scrollbar-width: thin;
+}
+
+.media-item {
+    min-width: 260px;
+    height: 180px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-card .carousel-wrap {
+    margin-left: -24px;
+    margin-right: -24px;
+}
+/*           resume & documents               */
+.doc-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.doc-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.doc-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+    margin: 0;
+}
+.doc-sub {
+    font-size: 12px;
+    color: #aaa;
+    margin: 0;
+}
+.doc-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-left: 6px;
+}
+.tag-blue { background: #E6F1FB; color: #0C447C; }
+.tag-green { background: #E1F5EE; color: #085041; }
+.tag-red {background: #E1F5EE; color:#ff2e2e;}
+
+.btn-open {
+    font-size: 12px;
+    padding: 6px 16px;
+    border: 1px solid #0C447C;
+    border-radius: 20px;
+    background: #E6F1FB;
+    color: #0C447C;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.btn-open:hover {
+    background: #B5D4F4;
+}
+.btn-open-green {
+    border-color: #085041;
+    background: #E1F5EE;
+    color: #085041;
+}
+.btn-open-green:hover {
+    background: #9FE1CB;
+}
+
+a.doc-card {
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+a.doc-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-color: #0054a9;
+}
+/*           skills               */
+.skill-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+.skill-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.skill-header {
+    padding: 16px 20px;
+}
+.skill-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #888;
+    margin: 0 0 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.badge {
+    font-size: 13px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+.badge-blue { background: #89c6ff; color: #0C447C; }
+.badge-green { background: #b2ffe4; color: #085041; }
+.badge-purple { background: #d7d4ff; color: #3C3489; }
+.badge-amber { background: #ffe8c0; color: #633806; }
+
+.skill-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-top: 0px solid #eee;
+}
+.skill-body.open {
+    max-height: 200px;
+    border-top: 1px solid #eee;
+}
+.skill-body-inner {
+    padding: 12px 20px 16px;
+}
+.skill-body-inner p {
+    font-size: 11px;
+    color: #aaa;
+    margin: 0 0 8px;
+}
+.skill-body-inner ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.skill-body-inner li {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 4px;
+    padding-left: 12px;
+    position: relative;
+}
+.skill-body-inner li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+}
+.arrow {
+    font-size: 12px;
+    color: #aaa;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+.arrow.open {
+    transform: rotate(180deg);
+}
+/* */
+.project-btn {
+    margin-left: 8px;
+    font-size: 11px;
+    padding: 2px 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: #f5f5f5;
+    color: #555;
+    cursor: pointer;
+}
+.project-btn:hover {
+    background: #eee;
+}
+
+.modal-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 14px;
+}
+.modal-carousel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.modal-track-wrap {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.modal-track {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+.modal-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+.modal-slide img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+.m-btn {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    flex-shrink: 0;
+}
+const modal = document.getElementById('cert-modal')
+const modalImg = document.getElementById('modal-img')
+const modalClose = document.getElementById('modal-close')
+
+document.querySelectorAll('.cert-card img').forEach(img => {
+  img.addEventListener('click', function() {
+    modalImg.src = this.src
+    modal.classList.add('active')
+  })
+})
+
+modalClose.addEventListener('click', function() {
+  modal.classList.remove('active')
+})
+
+modal.addEventListener('click', function(e) {
+  if (e.target === modal) modal.classList.remove('active')
+})
+
+// Skills accordion
+function toggleSkill(card) {
+    const body = card.querySelector('.skill-body')
+    const arrow = card.querySelector('.arrow')
+    const isOpen = body.classList.contains('open')
+
+    // ปิดทุก card ก่อน
+    document.querySelectorAll('.skill-body').forEach(b => b.classList.remove('open'))
+    document.querySelectorAll('.arrow').forEach(a => a.classList.remove('open'))
+
+    // ถ้ายังไม่เปิด ให้เปิด
+    if (!isOpen) {
+        body.classList.add('open')
+        arrow.classList.add('open')
+    }
+}
+
+let modalCurrent = 0
+let modalTotal = 0
+
+function openProject(event, images, title) {
+    event.stopPropagation()
+
+    const modal = document.getElementById('cert-modal')
+    const track = document.getElementById('modal-track')
+    const dots = document.getElementById('modal-dots')
+    const counter = document.getElementById('modal-counter')
+    const titleEl = document.getElementById('modal-title')
+
+    // รีเซ็ต
+    track.innerHTML = ''
+    dots.innerHTML = ''
+    track.style.transform = 'translateX(0)'
+    modalCurrent = 0
+    modalTotal = images.length
+    titleEl.textContent = title
+
+    // สร้าง slide
+    images.forEach((src, i) => {
+        const slide = document.createElement('div')
+        slide.className = 'modal-slide'
+        const img = document.createElement('img')
+        img.src = src
+        img.alt = `${title} ${i + 1}`
+        img.onerror = function() {
+            slide.classList.add('skeleton-slide')
+            slide.textContent = 'ยังไม่มีรูปผลงาน'
+            this.remove()
+        }
+        slide.appendChild(img)
+        track.appendChild(slide)
+
+        // dot
+        const dot = document.createElement('div')
+        dot.className = 'dot' + (i === 0 ? ' active' : '')
+        dot.onclick = () => modalGoTo(i)
+        dots.appendChild(dot)
+    })
+
+    counter.textContent = `1 / ${modalTotal}`
+    modal.classList.add('active')
+}
+
+function modalMove(dir) {
+    modalCurrent = (modalCurrent + dir + modalTotal) % modalTotal
+    modalGoTo(modalCurrent)
+}
+
+function modalGoTo(index) {
+    modalCurrent = index
+    document.getElementById('modal-track').style.transform = `translateX(-${index * 100}%)`
+    document.querySelectorAll('#modal-dots .dot').forEach((d, i) => {
+        d.classList.toggle('active', i === index)
+    })
+    document.getElementById('modal-counter').textContent = `${index + 1} / ${modalTotal}`
+}
+
+// Carousel
+function move(btn, dir) {
+    const wrap = btn.closest('.carousel-wrap')
+    const track = wrap.querySelector('.carousel-track')
+    const dots = wrap.querySelector('.carousel-dots')
+    const counter = wrap.querySelector('.carousel-counter')
+    const total = wrap.querySelectorAll('.carousel-slide').length
+
+    let current = parseInt(track.dataset.current || 0)
+    current = (current + dir + total) % total
+
+    // เปลี่ยนจาก transform มาเป็น scrollLeft
+    track.scrollLeft = current * track.offsetWidth
+    track.dataset.current = current
+
+    // อัพเดท dots
+    dots.querySelectorAll('.dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current)
+    })
+
+    // อัพเดท counter
+    counter.textContent = `${current + 1} / ${total}`
+}
+
+// สร้าง dots และ counter อัตโนมัติ
+document.querySelectorAll('.carousel-wrap').forEach(wrap => {
+    const slides = wrap.querySelectorAll('.carousel-slide')
+    const dots = wrap.querySelector('.carousel-dots')
+    const counter = wrap.querySelector('.carousel-counter')
+    const total = slides.length
+
+    // สร้าง dot ตามจำนวน slide
+    slides.forEach((_, i) => {
+        const dot = document.createElement('div')
+        dot.classList.add('dot')
+        if (i === 0) dot.classList.add('active')
+        dot.onclick = () => goTo(wrap, i)
+        dots.appendChild(dot)
+    })
+
+    // counter เริ่มต้น
+    counter.textContent = `1 / ${total}`
+})
+
+function goTo(wrap, index) {
+    const track = wrap.querySelector('.carousel-track')
+    const dots = wrap.querySelector('.carousel-dots')
+    const counter = wrap.querySelector('.carousel-counter')
+    const total = wrap.querySelectorAll('.carousel-slide').length
+
+
+    track.scrollLeft = index * track.offsetWidth
+    track.dataset.current = index
+
+    dots.querySelectorAll('.dot').forEach((d, i) => {
+        d.classList.toggle('active', i === index)
+    })
+
+    counter.textContent = `${index + 1} / ${total}`
+}
+
+// อัพเดท dots เมื่อ scroll ด้วยนิ้ว
+document.querySelectorAll('.carousel-track').forEach(track => {
+    track.addEventListener('scroll', function() {
+        const wrap = track.closest('.carousel-wrap')
+        const dots = wrap.querySelector('.carousel-dots')
+        const counter = wrap.querySelector('.carousel-counter')
+        const total = wrap.querySelectorAll('.carousel-slide').length
+
+        // คำนวณว่าตอนนี้อยู่ slide ไหน
+        const index = Math.round(track.scrollLeft / track.offsetWidth)
+
+        // อัพเดท dots
+        dots.querySelectorAll('.dot').forEach((d, i) => {
+            d.classList.toggle('active', i === index)
+        })
+
+        // อัพเดท counter
+        counter.textContent = `${index + 1} / ${total}`
+
+        // sync กับ dataset ให้ปุ่ม ‹ › ทำงานถูกต้องด้วย
+        track.dataset.current = index
+    })
+})
+
+function handleForm(e) {
+    e.preventDefault()
+    document.getElementById('form-msg').style.display = 'block'
+}
+
+function openImg(imgSrc, title) {
+    const fakeEvent = { stopPropagation: () => {} }
+    openProject(fakeEvent, [imgSrc], title)
+}

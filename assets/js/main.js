@@ -1,13 +1,7 @@
 const modal = document.getElementById('cert-modal')
-const modalImg = document.getElementById('modal-img')
+
 const modalClose = document.getElementById('modal-close')
 
-document.querySelectorAll('.cert-card img').forEach(img => {
-  img.addEventListener('click', function() {
-    modalImg.src = this.src
-    modal.classList.add('active')
-  })
-})
 
 modalClose.addEventListener('click', function() {
   modal.classList.remove('active')
