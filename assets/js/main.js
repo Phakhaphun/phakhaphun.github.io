@@ -150,18 +150,18 @@ function openProject(event, images, title) {
     const btnNext  = document.querySelector('#cert-modal .m-btn:last-of-type')
 
     // รีเซ็ต
-    track.innerHTML   = ''
-    dots.innerHTML    = ''
-    track.style.transform = 'translateX(0)'
+    track.innerHTML = ''
+    dots.innerHTML  = ''
+    track.scrollLeft = 0
     modalCurrent = 0
     modalTotal   = images.length
     if (titleEl) titleEl.textContent = title
 
     // ซ่อน/แสดงปุ่มและ counter ตามจำนวนรูป
     const single = images.length <= 1
-    btnPrev.style.display  = single ? 'none' : 'flex'
-    btnNext.style.display  = single ? 'none' : 'flex'
-    counter.style.display  = single ? 'none' : 'block'
+    btnPrev.style.display = single ? 'none' : 'flex'
+    btnNext.style.display = single ? 'none' : 'flex'
+    counter.style.display = single ? 'none' : 'block'
 
     // สร้าง slide
     images.forEach((src, i) => {
@@ -191,6 +191,19 @@ function openProject(event, images, title) {
     if (!single) counter.textContent = `1 / ${modalTotal}`
 
     modal.classList.add('active')
+
+    // sync dots + counter เมื่อลากด้วยนิ้วใน modal
+    track.onscroll = () => {
+        const slideWidth = track.querySelector('.modal-slide')?.getBoundingClientRect().width
+        if (!slideWidth) return
+        const index = Math.round(track.scrollLeft / slideWidth)
+        if (index === modalCurrent) return
+        modalCurrent = index
+        document.querySelectorAll('#modal-dots .dot').forEach((d, i) => {
+            d.classList.toggle('active', i === index)
+        })
+        counter.textContent = `${index + 1} / ${modalTotal}`
+    }
 }
 
 function modalMove(dir) {
@@ -200,7 +213,9 @@ function modalMove(dir) {
 
 function modalGoTo(index) {
     modalCurrent = index
-    document.getElementById('modal-track').style.transform = `translateX(-${index * 100}%)`
+    const track = document.getElementById('modal-track')
+    const slideWidth = track.querySelector('.modal-slide')?.getBoundingClientRect().width || track.offsetWidth
+    track.scrollTo({ left: index * slideWidth, behavior: 'smooth' })
     document.querySelectorAll('#modal-dots .dot').forEach((d, i) => {
         d.classList.toggle('active', i === index)
     })
