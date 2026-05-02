@@ -1,0 +1,70 @@
+/*           resume & documents               */
+.doc-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.doc-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.doc-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+    margin: 0;
+}
+.doc-sub {
+    font-size: 12px;
+    color: #aaa;
+    margin: 0;
+}
+.doc-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-left: 6px;
+}
+.tag-blue { background: #E6F1FB; color: #0C447C; }
+.tag-green { background: #E1F5EE; color: #085041; }
+.tag-red {background: #E1F5EE; color:#ff2e2e;}
+
+.btn-open {
+    font-size: 12px;
+    padding: 6px 16px;
+    border: 1px solid #0C447C;
+    border-radius: 20px;
+    background: #E6F1FB;
+    color: #0C447C;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.btn-open:hover {
+    background: #B5D4F4;
+}
+.btn-open-green {
+    border-color: #085041;
+    background: #E1F5EE;
+    color: #085041;
+}
+.btn-open-green:hover {
+    background: #9FE1CB;
+}
+
+a.doc-card {
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+a.doc-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-color: #0054a9;
+}

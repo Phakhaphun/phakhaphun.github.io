@@ -1,0 +1,128 @@
+/* contact */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* ฝั่งซ้าย */
+.contact-info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #222;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.contact-item:hover { color: #0054a9; }
+
+.contact-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #aaa;
+    min-width: 70px;
+}
+
+.copy-btn {
+    font-size: 10px;
+    padding: 2px 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: #f5f5f5;
+    color: #888;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    background: #E6F1FB;
+    color: #0054a9;
+    border-color: #0054a9;
+}
+
+/* ฝั่งขวา — form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-field label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.form-field input,
+.form-field textarea {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    color: #222;
+    font-family: monospace;
+    font-size: 13px;
+    padding: 10px 14px;
+    outline: none;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: #0054a9;
+    background: #fff;
+}
+
+.btn-send {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    background: #0054a9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.2s;
+}
+
+.btn-send:hover { background: #003d7a; }
+
+/* responsive */
+@media (max-width: 768px) {
+    .contact-section { grid-template-columns: 1fr; gap: 32px; }
+}

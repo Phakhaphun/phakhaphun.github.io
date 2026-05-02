@@ -1,0 +1,49 @@
+/*           home               */
+.home {
+            text-align: center;
+            padding: 20px 0;
+            padding-bottom: 10px;
+        }
+
+.profile-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border: 4px solid #f0f0f0;
+            margin-bottom: 10px;
+        }
+
+.home h1 {
+    color: #0054a9;
+    font-size: 2rem;
+    margin: 5px auto 10px auto;
+    
+}
+.home h2 {
+    color: #7a8fa0;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.home h3 {
+    text-align: left;
+    color: #000000;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 1px;
+}
+.home p {
+    text-align: justify;
+    text-indent: 2em;
+    max-width: 750px;
+    margin: 0 auto 25px auto;
+    color: #000000;
+}
+
+.about-me {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    color: #555;
+    line-height: 1.5;
+}

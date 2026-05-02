@@ -1,0 +1,126 @@
+/*           experience               */
+.exp-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.exp-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 4px;
+}
+
+.exp-company {
+    font-size: 14px;
+    color: #0054a9;
+    margin: 0 0 4px;
+}
+
+.exp-date {
+    font-size: 12px;
+    color: #aaa;
+    margin: 0 0 12px;
+}
+
+.exp-desc {
+    padding-left: 16px;
+    margin: 0 0 20px;
+}
+
+.exp-desc li {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+/*           carousel               */
+.carousel-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.carousel-slide {
+    scroll-snap-align: start;
+    min-width: 100%;
+    height: 220px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.carousel-slide img {
+    pointer-events: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #f5f5f5;
+    display: block;
+}
+
+.skeleton-slide {
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #ccc;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    z-index: 10;
+}
+
+.btn-prev { left: 8px; }
+.btn-next { right: 8px; }
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #0054a9;
+}
+
+.carousel-counter {
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    margin: 6px 0 0;
+}
