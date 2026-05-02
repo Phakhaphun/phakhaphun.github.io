@@ -185,14 +185,6 @@ function handleForm(e) {
 }
 
 function openImg(imgSrc, title) {
-    const modal = document.getElementById('cert-modal')
-    const modalImg = document.getElementById('modal-img')
-    const skeleton = document.getElementById('modal-skeleton')
-
-    modalImg.src = imgSrc
-    modalImg.alt = title
-    modalImg.style.display = 'block'
-    skeleton.style.display = 'none'
-
-    modal.classList.add('active')
+    const fakeEvent = { stopPropagation: () => {} }
+    openProject(fakeEvent, [imgSrc], title)
 }
