@@ -90,6 +90,8 @@ section h3 {
   position: relative;
   max-width: 90vw;
   max-height: 90vh;
+  overflow-y: auto;        
+  
 }
 .modal-content img {
   max-width: 100%;
@@ -108,6 +110,9 @@ section h3 {
   height: 32px;
   cursor: pointer;
   font-size: 14px;
+}
+.modal-title {
+     display: none;
 }
 
 @media (max-width: 768px) {
