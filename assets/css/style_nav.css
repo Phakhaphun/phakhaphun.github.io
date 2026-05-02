@@ -39,14 +39,21 @@ nav .container {
 }
 
 @media (max-width: 768px) {
+    nav {
+        padding: 12px 16px; /* ลด padding */
+    }
+    nav .container {
+        flex-direction: column; /* เปลี่ยนจากแถวเดียว เป็นวางซ้อนกัน */
+        gap: 10px;
+    }
     .nav-links {
         display: flex;
-        flex-wrap: wrap;        
-        gap: 12px;
+        flex-wrap: wrap;
+        gap: 10px;
         justify-content: center;
-        padding: 8px 0;
+        padding: 0;
     }
     .nav-links a {
-        font-size: 13px;
+        font-size: 12px;
     }
 }
