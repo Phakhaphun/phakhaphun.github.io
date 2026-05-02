@@ -1,15 +1,15 @@
-/* projects */
 .project-card {
-    border: 1px solid #eee;
-    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
     padding: 10px;
-    background: #fff;
-    overflow: hidden; 
+    background: var(--color-bg);
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .project-tag {
     font-size: 11px;
-    color: #aaa;
+    color: var(--color-text-muted);
     margin: 0 0 6px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -18,13 +18,13 @@
 .project-title {
     font-size: 18px;
     font-weight: 600;
-    color: #222;
+    color: var(--color-text);
     margin: 0 0 12px;
 }
 
 .project-desc {
     font-size: 14px;
-    color: #555;
+    color: var(--color-text-soft);
     line-height: 1.7;
     margin: 0 0 5px;
     text-align: justify;
@@ -33,38 +33,28 @@
 
 .project-desc-end {
     font-size: 14px;
-    color: #555;
+    color: var(--color-text-soft);
     line-height: 1.7;
     margin: 0 0 24px;
     text-align: justify;
     text-indent: 2em;
 }
 
-/* media row เลื่อนได้ */
-.project-media {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
-    scrollbar-width: thin;
+/* — Project images (in card, before zoom) — */
+.project-card .carousel-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    background: var(--color-bg-soft);
+    display: block;
+    cursor: zoom-in;
 }
 
-.media-item {
-    min-width: 260px;
-    height: 180px;
-    border-radius: 8px;
-    flex-shrink: 0;
-    object-fit: cover;
-}
-
+/* — Tech badges — */
 .project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-}
-
-.project-card .carousel-wrap {
-    margin-left: -24px;
-    margin-right: -24px;
+    margin-top: 16px;
 }

@@ -1,0 +1,36 @@
+@media (max-width: 768px) {
+
+    /* Base */
+    body { font-size: 14px; }
+
+    .container { padding: 0 16px; }
+
+    /* Nav */
+    nav { padding: 12px 16px; }
+
+    nav .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .nav-links a { font-size: 12px; }
+
+    /* Home */
+    .home p,
+    .about-me p { max-width: 100%; }
+
+    /* Projects & Experience images */
+    .project-card .carousel-slide img,
+    .exp-card .carousel-slide img {
+        max-height: 260px;
+    }
+
+    /* Contact */
+    .contact-section { grid-template-columns: 1fr; gap: 32px; }
+}

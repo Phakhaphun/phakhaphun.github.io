@@ -1,0 +1,91 @@
+.carousel-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* smooth scroll บน iOS/iPad */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-slide {
+    scroll-snap-align: center;        /* center ทำให้รูปอยู่กลางเสมอ */
+    scroll-snap-stop: always;         /* บังคับ snap ทีละ 1 slide ไม่ข้าม */
+    min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;          /* รูปอยู่กลาง slide */
+}
+
+/* NOTE: ตัว img ใน carousel แต่ละ section กำหนดใน section นั้นๆ ด้านบน
+         (project, experience, cert) เพื่อให้ override ได้ง่ายต่อ section */
+
+.skeleton-slide {
+    background: var(--color-bg-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #ccc;
+    min-height: 200px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    z-index: 10;
+}
+
+.btn-prev { left: 8px; }
+.btn-next { right: 8px; }
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.dot.active {
+    background: var(--color-primary);
+}
+
+.carousel-counter {
+    text-align: center;
+    font-size: 12px;
+    color: var(--color-text-muted);
+    margin: 6px 0 0;
+}

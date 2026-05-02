@@ -1,0 +1,148 @@
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+/* — Close button — */
+.modal-close {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-modal);
+}
+
+.modal-title {
+    display: none;
+}
+
+/* — Modal layout — */
+.modal-content {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+    background: transparent;
+}
+
+/* — Modal carousel — */
+.modal-carousel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.modal-track-wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.modal-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.modal-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* — Each slide — */
+.modal-slide {
+    scroll-snap-align: center;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+/* — Modal image — */
+.modal-slide img {
+    max-width: 100vw;
+    max-height: calc(100vh - 96px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    background: transparent;  /* ← โปร่งใส ไม่มีสีขาวข้างๆ */
+}
+
+/* — Nav buttons ‹ › — */
+.m-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition);
+    flex-shrink: 0;
+}
+
+.m-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.modal-carousel > .m-btn:first-child { left: 8px; }
+.modal-carousel > .m-btn:last-child  { right: 8px; }
+
+/* — Modal dots & counter — */
+.modal-content .carousel-dots {
+    margin-top: 12px;
+}
+
+.modal-content .carousel-counter {
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 6px;
+}

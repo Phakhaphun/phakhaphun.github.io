@@ -1,9 +1,8 @@
-/*           experience               */
 .exp-card {
-    border: 1px solid #eee;
-    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
     overflow: hidden;
-    background: #fff;
+    background: var(--color-bg);
     margin-bottom: 20px;
     padding: 20px;
 }
@@ -11,19 +10,19 @@
 .exp-info h3 {
     font-size: 16px;
     font-weight: 600;
-    color: #222;
+    color: var(--color-text);
     margin: 0 0 4px;
 }
 
 .exp-company {
     font-size: 14px;
-    color: #0054a9;
+    color: var(--color-primary);
     margin: 0 0 4px;
 }
 
 .exp-date {
     font-size: 12px;
-    color: #aaa;
+    color: var(--color-text-muted);
     margin: 0 0 12px;
 }
 
@@ -34,100 +33,19 @@
 
 .exp-desc li {
     font-size: 13px;
-    color: #555;
+    color: var(--color-text-soft);
     margin-bottom: 6px;
     line-height: 1.6;
 }
 
-/*           carousel               */
-.carousel-wrap {
-    position: relative;
+/* — Experience images (in card, before zoom) — */
+.exp-card .carousel-slide img {
     width: 100%;
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-}
-
-.carousel-slide {
-    scroll-snap-align: start;
-    min-width: 100%;
-    transition: transform 0.3s ease;
-    flex-shrink: 0;
-}
-
-.carousel-slide img {
-    pointer-events: auto;
-    width: 100%;
-    height: auto;          
-    max-height: 400px;     
+    height: auto;
+    max-height: 400px;
     object-fit: contain;
-    background: #f5f5f5;
+    background: var(--color-bg-soft);
     display: block;
+    cursor: zoom-in;
 }
 
-.skeleton-slide {
-    background: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    color: #ccc;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 16px;
-    color: #555;
-    z-index: 10;
-}
-
-.btn-prev { left: 8px; }
-.btn-next { right: 8px; }
-
-.carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    margin-top: 10px;
-}
-
-.dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #ddd;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: #0054a9;
-}
-
-.carousel-counter {
-    text-align: center;
-    font-size: 12px;
-    color: #aaa;
-    margin: 6px 0 0;
-}
-
-@media (max-width: 768px) {
-    .carousel-slide img {
-        max-height: 260px;  
-    }
-}
