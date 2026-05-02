@@ -39,6 +39,8 @@ function openProject(event, images, title) {
     const dots = document.getElementById('modal-dots')
     const counter = document.getElementById('modal-counter')
     const titleEl = document.getElementById('modal-title')
+    const btnPrev = document.querySelector('#cert-modal .m-btn:first-of-type')
+    const btnNext = document.querySelector('#cert-modal .m-btn:last-of-type')
 
     // รีเซ็ต
     track.innerHTML = ''
@@ -47,6 +49,17 @@ function openProject(event, images, title) {
     modalCurrent = 0
     modalTotal = images.length
     titleEl.textContent = title
+
+    // ซ่อน/แสดงปุ่มและ counter ตามจำนวนรูป
+    if (images.length <= 1) {
+        btnPrev.style.display = 'none'
+        btnNext.style.display = 'none'
+        counter.style.display = 'none'
+    } else {
+        btnPrev.style.display = 'flex'
+        btnNext.style.display = 'flex'
+        counter.style.display = 'block'
+    }
 
     // สร้าง slide
     images.forEach((src, i) => {
@@ -63,14 +76,18 @@ function openProject(event, images, title) {
         slide.appendChild(img)
         track.appendChild(slide)
 
-        // dot
-        const dot = document.createElement('div')
-        dot.className = 'dot' + (i === 0 ? ' active' : '')
-        dot.onclick = () => modalGoTo(i)
-        dots.appendChild(dot)
+        if (images.length > 1) {
+            const dot = document.createElement('div')
+            dot.className = 'dot' + (i === 0 ? ' active' : '')
+            dot.onclick = () => modalGoTo(i)
+            dots.appendChild(dot)
+        }
     })
 
-    counter.textContent = `1 / ${modalTotal}`
+    if (images.length > 1) {
+        counter.textContent = `1 / ${modalTotal}`
+    }
+
     modal.classList.add('active')
 }
 
@@ -119,6 +136,14 @@ document.querySelectorAll('.carousel-wrap').forEach(wrap => {
     const counter = wrap.querySelector('.carousel-counter')
     const total = slides.length
 
+    // ถ้ามีแค่ 1 slide ซ่อนปุ่มและ dots
+    if (total <= 1) {
+        wrap.querySelector('.btn-prev').style.display = 'none'
+        wrap.querySelector('.btn-next').style.display = 'none'
+        counter.style.display = 'none'
+        return
+    }
+
     // สร้าง dot ตามจำนวน slide
     slides.forEach((_, i) => {
         const dot = document.createElement('div')
@@ -128,7 +153,6 @@ document.querySelectorAll('.carousel-wrap').forEach(wrap => {
         dots.appendChild(dot)
     })
 
-    // counter เริ่มต้น
     counter.textContent = `1 / ${total}`
 })
 
