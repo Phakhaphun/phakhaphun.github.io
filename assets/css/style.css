@@ -110,9 +110,9 @@ section h3 {
     inset: 0;
     background: rgba(0, 0, 0, 0.92);
     z-index: 2000;
-    align-items: flex-start;    /* รูปแนวตั้ง scroll ได้ */
+    align-items: center;
     justify-content: center;
-    overflow: auto;           /* scroll ลงได้ถ้ารูปสูง */
+    overflow: hidden;
     box-sizing: border-box;
 }
 
@@ -143,17 +143,17 @@ section h3 {
     display: none;
 }
 
-/* modal content */
+/* modal content เต็มหน้าจอ */
 .modal-content {
     position: relative;
-    width: max-content;
-    max-width: 100vw;
+    width: 100vw;
+    height: 100vh;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 48px;          /* เว้นที่ปุ่มปิด */
-    padding-bottom: 48px;
+    justify-content: center;
+    padding: 48px 0;
 }
 
 /* Modal carousel */
@@ -161,35 +161,42 @@ section h3 {
     display: flex;
     align-items: center;
     width: 100%;
+    height: 100%;
     position: relative;
 }
 
 .modal-track-wrap {
     width: 100%;
+    height: 100%;
     overflow: hidden;
     min-width: 0;
 }
 
 .modal-track {
     display: flex;
-    transition: transform 0.3s ease;
     width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
 }
 
 /* แต่ละ slide */
 .modal-slide {
     min-width: 100vw;
+    width: 100vw;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
 }
 
-/* รูปใน modal — เต็มความกว้าง สูงตามจริง ไม่ crop */
+/* รูปใน modal — fit พอดีหน้าจอ ไม่ crop ไม่ว่าแนวไหน */
 .modal-slide img {
-    width: auto;               /* เต็มความกว้างหน้าจอ */
-    height: auto;               /* สูงตามสัดส่วนจริง */
-    object-fit: contain;        /* ไม่ crop */
+    max-width: 100vw;
+    max-height: calc(100vh - 96px); /* เว้นที่ padding top/bottom */
+    width: auto;
+    height: auto;
+    object-fit: contain;
     display: block;
     background: #000;
 }
