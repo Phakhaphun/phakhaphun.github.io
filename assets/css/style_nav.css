@@ -37,3 +37,12 @@ nav .container {
     font-size: 16px;
     
 }
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* ซ่อน navbar บนมือถือไว้ก่อน */
+    }
+    nav .container {
+        justify-content: center;
+    }
+}
