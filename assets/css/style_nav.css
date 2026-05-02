@@ -40,9 +40,13 @@ nav .container {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* ซ่อน navbar บนมือถือไว้ก่อน */
-    }
-    nav .container {
+        display: flex;
+        flex-wrap: wrap;        
+        gap: 12px;
         justify-content: center;
+        padding: 8px 0;
+    }
+    .nav-links a {
+        font-size: 13px;
     }
 }
